@@ -1,0 +1,27 @@
+<p>profile works!</p>
+<h2> {{name}} is the only hero here!</h2>
+<h2>{{name}}</h2><br>
+<p> {{id}}</p>
+
+<div><span>id: </span>{{id}}</div>
+<div>
+  <label for="name">Profile name: </label>
+  <input id="name" [(ngModel)]="name" placeholder="name"> <!--ngmodel allows for instance change to field-->
+</div>
+
+<h2>{{profile.name}} Details</h2>
+<div><span>id: </span>{{profile.id}}</div>
+<div><span>name: </span>{{profile.name}}</div>
+<br><br><br>
+<input [(ngModel)]="profile.name" /> <!--will update ALL instances for that key-->
+
+
+<h2>My Books</h2>
+<ul class="books">
+  <li *ngFor="let profile of bookBees"> <!--this line is mainly responsible for showing list of books-->
+    <button type="button"> <!-- profile= one pojo , bookBees= an array of pojos-->
+      <span class="badge">{{profile.id}}</span> <!-- singular pojo required to iterate through array-->
+      <span class="name">{{profile.name}}</span>
+    </button>
+  </li>
+</ul>

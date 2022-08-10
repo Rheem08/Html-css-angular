@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+Days of Journey: <input type="text" id="doj" name="daysofjourney">
+<input type="button" value="submit" onclick="dayscounter()">
+
+<script language="javascript" type="text/javascript">
+/*var travel = document.getElementById("doj").value;*/
+
+function dayscounter() {
+    var travel = document.getElementById("doj").value;
+    var days;
+    for(days=1;days<=travel;days++)
+    {
+        document.write(days);
+    }
+}
+</script>
+
+</body>
+</html> 

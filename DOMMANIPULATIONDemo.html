@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Manipulation</title>
+</head>
+<body>
+    <h2 id="myh2"> DOM MANIPULATION</h2>
+    
+
+    <button id="mybtn">Click for action</button>
+    <script>
+        var mybtn= document.getElementById("mybtn");
+        mybtn.addEventListener("click", mybtnFunction);
+        function mybtnFunction(){
+
+            alert("It Works")
+            var myHead2 = document.createElement("h2");
+            myHead2.innerHTML="This is created on button click";
+            myHead2.style.color="red";
+            document.body.append(myHead2);
+            
+        }
+
+    </script>
+    
+</body>
+</html>

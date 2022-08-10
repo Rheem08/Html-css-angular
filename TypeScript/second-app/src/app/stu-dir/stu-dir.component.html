@@ -1,0 +1,12 @@
+<p>stu-dir works!</p>
+<h2> {{names}}</h2>
+
+<ol>
+    <li *ngFor=" let name of names"
+    [ngStyle]=" {'background-color': 'red'}"
+    > {{name}}</li>
+
+</ol>
+<br>
+<hr>
+<p appText style="color:yellow">This is a custom directive</p>
